@@ -136,7 +136,35 @@
     <p>Привет! Меня зовут Саша, я — опытный редактор, продюсер и журналист.</p>
   </section>
 
-  <section class="projects">
+  
+  <section class="experience">
+    <h2>Опыт и навыки</h2>
+    <p><strong>Образование:</strong> Московский государственный университет им. Ломоносова, факультет журналистики</p>
+    <ul>
+      <li><strong>«Алена, блин!», YouTube, АО «Ньюс Медиа» — Шеф-редактор</strong><br>С 2023 по настоящее время. Руководство проектами, сценарии, съёмки, пост-продакшн, СММ, бюджетирование, управление командой из 10 человек.</li>
+      <li><strong>Издательство редких книг — Креативный продюсер журнала «Москвичка»</strong><br>2024–2025. Разработка концепций, продюсирование съёмок, редактура видео и соцсетей.</li>
+      <li><strong>«Алена, блин!», АО «Ньюс Медиа» — Выпускающий редактор</strong><br>2019–2023. Монтаж тизеров, редактура интервью, SMM, текстовое сопровождение.</li>
+      <li><strong>SUPER, ООО — Заместитель главного редактора Super.ru</strong><br>2019–2022. Управление коллективом, контент-план, редактура и координация отдела.</li>
+      <li><strong>Эксмо — Литературный редактор</strong><br>2018–2019. Редактура книг, помощь авторам, структурирование текста.</li>
+      <li><strong>АЙНЬЮС, ООО — Старший креативный продюсер</strong><br>2017–2019. Контент-план, креатив, редактура и продюсирование спецпроектов.</li>
+      <li><strong>АЙНЬЮС, ООО — Креативный продюсер</strong><br>2013–2017. Корреспондент, съёмки, тексты, идеи, взаимодействие со спикерами.</li>
+    </ul>
+  </section>
+
+  <section class="timeline">
+    <h2>Хронология опыта</h2>
+    <div class="timeline-container">
+      <div class="timeline-item"><span>2023 — н.в.</span><p><strong><i class="fas fa-video"></i> Шеф-редактор</strong> — «Алена, блин!», YouTube</p></div>
+      <div class="timeline-item"><span>2024 — 2025</span><p><strong><i class="fas fa-lightbulb"></i> Креативный продюсер</strong> — «Москвичка»</p></div>
+      <div class="timeline-item"><span>2019 — 2023</span><p><strong><i class="fas fa-pen-nib"></i> Выпускающий редактор</strong> — «Алена, блин!»</p></div>
+      <div class="timeline-item"><span>2019 — 2022</span><p><strong><i class="fas fa-users"></i> Замглавред</strong> — Super.ru</p></div>
+      <div class="timeline-item"><span>2018 — 2019</span><p><strong><i class="fas fa-book"></i> Литературный редактор</strong> — Эксмо</p></div>
+      <div class="timeline-item"><span>2017 — 2019</span><p><strong><i class="fas fa-chess-king"></i> Старший продюсер</strong> — Super.ru / Life.ru</p></div>
+      <div class="timeline-item"><span>2013 — 2017</span><p><strong><i class="fas fa-microphone"></i> Креативный продюсер</strong> — Life.ru</p></div>
+    </div>
+  </section>
+
+<section class="projects">
     <h2>Проекты</h2>
 
     <div class="project-card">
@@ -179,5 +207,19 @@
       </div>
     </div>
   </section>
+</body>
+</html>
+
+  <script>
+    const items = document.querySelectorAll('.timeline-item');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+    items.forEach(item => observer.observe(item));
+  </script>
 </body>
 </html>
